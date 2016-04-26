@@ -20,7 +20,8 @@ namespace FarmitWebServIT
         [WebMethod]
         public string HelloWorld()
         {
-            return "Hello World";
+            string name = "Agnes";
+            return "Hello darling ,"+ name +", my World";
         }
     }
 }
