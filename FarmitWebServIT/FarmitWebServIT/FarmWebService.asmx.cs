@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using FarmitWebServIT.Model;
+
 
 namespace FarmitWebServIT
 {
@@ -16,12 +18,8 @@ namespace FarmitWebServIT
     // [System.Web.Script.Services.ScriptService]
     public class FarmWebService : System.Web.Services.WebService
     {
+        
+     
 
-        [WebMethod]
-        public string HelloWorld()
-        {
-            string name = "Agnes";
-            return "Hello darling ,"+ name +", my World";
-        }
     }
 }
