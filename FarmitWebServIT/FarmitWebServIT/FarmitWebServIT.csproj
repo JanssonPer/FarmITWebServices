@@ -101,26 +101,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Model\Model1.edmx">
+    <EntityDeploy Include="Model\FarmModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>FarmModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Model\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <Content Include="Model\FarmModel.edmx.diagram">
+      <DependentUpon>FarmModel.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -131,30 +121,52 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FarmWebService.asmx" />
+    <Content Include="Model\FarmModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FarmModel.edmx</DependentUpon>
+      <LastGenOutput>FarmModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\FarmModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FarmModel.edmx</DependentUpon>
+      <LastGenOutput>FarmModel.cs</LastGenOutput>
+    </Content>
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Dal\Dal.cs" />
     <Compile Include="FarmWebService.asmx.cs">
       <DependentUpon>FarmWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Model\Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+    <Compile Include="Model\Animal.cs">
+      <DependentUpon>FarmModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="Model\Box.cs">
+      <DependentUpon>FarmModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Model1.Designer.cs">
+    <Compile Include="Model\Building.cs">
+      <DependentUpon>FarmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FarmModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>FarmModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FarmModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FarmModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FarmModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FarmModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Food.cs">
+      <DependentUpon>FarmModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
