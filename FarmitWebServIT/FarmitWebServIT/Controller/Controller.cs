@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FarmITApp.Model;
-using FarmITApp.DatabaseAccessLayer;
+using System.Web;
+using FarmitWebServIT.Model;
+using FarmitWebServIT.DatabaseAccessLayer;
 
-namespace FarmITApp.ControllerFarm
+
+namespace FarmitWebServIT.Controller
 {
     public class Controller
     {
